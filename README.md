@@ -16,8 +16,8 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/你的用户名/campus-autologin.git
-cd campus-autologin
+git clone https://github.com/sagemoyi/techlanlogin.git
+cd techlanlogin
 ```
 
 ### 2. 安装依赖
