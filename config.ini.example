@@ -1,21 +1,20 @@
 [login]
-# 认证页面地址
-url = http://10.50.255.11/a79.htm?wlanacname=Huawei
-# 学号
-username = 你的学号
-# 密码
-password = 你的密码
-# 运营商: @cmcc=移动  @telecom=电信  @unicom=联通
+# Campus portal page URL. Replace PORTAL_HOST with your campus portal host/IP.
+url = http://PORTAL_HOST/a79.htm?wlanacname=Huawei
+# Student/account ID
+username = your_student_id
+# Password
+password = your_password
+# ISP suffix; examples vary by campus: @cmcc, @telecom, @unicom, @dx, @lt, or empty.
 isp = @cmcc
 
 [settings]
-# 无头模式: true=后台运行(不弹窗)  false=显示浏览器窗口
+# true = headless background mode, false = show browser window
 headless = true
-# 页面元素等待超时(秒)
+# Selenium element wait timeout in seconds
 timeout = 10
-# 失败重试次数
+# Retry count and delay
 retry_count = 3
-# 重试间隔(秒)
 retry_delay = 5
-# 开机延迟(秒) — 等待网卡就绪，开机自启时建议设为 10~15
+# Startup delay in seconds, useful when auto-starting after Windows login
 startup_delay = 10

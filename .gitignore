@@ -27,3 +27,15 @@ venv/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# ── Browser/network captures may contain credentials ──
+*.har
+*har*.json
+login-*.txt
+*capture*.txt
+*capture*.json
+
+# ── Router-side real config/logs ──
+router/config
+router/*.log
+campus-login.log

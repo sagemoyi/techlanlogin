@@ -1,0 +1,28 @@
+# Dr.COM / EPortal campus login config for router/drcom-router-login.sh
+# Copy to /data/campus-login/config and chmod 600.
+
+# Required: replace with your portal addresses.
+PORTAL_PAGE='http://PORTAL_HOST/a79.htm?wlanacname=Huawei'
+LOGIN_BASE='http://PORTAL_HOST:801/eportal/portal/login'
+
+# Required: used to check whether Internet access is already available.
+CHECK_URL='http://www.baidu.com'
+CHECK_KEYWORD='baidu'
+
+# Required: credentials. Do not commit the real config file.
+USERNAME='your_student_id'
+PASSWORD='your_password'
+
+# ISP suffix; examples vary by campus: @cmcc, @telecom, @unicom, @dx, @lt, or empty.
+ISP='@cmcc'
+
+# Dr.COM 4.x JSONP format commonly uses user_account=,0,<username><suffix>.
+ACCOUNT_PREFIX=',0,'
+
+# Optional overrides. Usually auto-extracted from the portal page.
+# WLAN_USER_IP=''
+# WLAN_USER_MAC='000000000000'
+# WLAN_AC_IP=''
+# WLAN_AC_NAME=''
+# JS_VERSION='4.1.3'
+# TERMINAL_TYPE='1'
