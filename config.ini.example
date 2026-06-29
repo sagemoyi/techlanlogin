@@ -1,20 +1,25 @@
 [login]
 # Campus portal page URL. Replace PORTAL_HOST with your campus portal host/IP.
 url = http://PORTAL_HOST/a79.htm?wlanacname=Huawei
+# Optional. If omitted, derived from url as http://PORTAL_HOST:801/eportal/portal/login
+login_base = http://PORTAL_HOST:801/eportal/portal/login
 # Student/account ID
 username = your_student_id
 # Password
 password = your_password
 # ISP suffix; examples vary by campus: @cmcc, @telecom, @unicom, @dx, @lt, or empty.
 isp = @cmcc
+# Dr.COM 4.x JSONP account prefix commonly observed in browser HAR.
+account_prefix = ,0,
 
 [settings]
-# true = headless background mode, false = show browser window
-headless = true
-# Selenium element wait timeout in seconds
-timeout = 10
+# Used to decide whether Internet access is already available.
+check_url = http://www.baidu.com
+check_keyword = baidu
 # Retry count and delay
 retry_count = 3
 retry_delay = 5
 # Startup delay in seconds, useful when auto-starting after Windows login
 startup_delay = 10
+# Wait after login submit before checking Internet again
+post_login_wait = 3

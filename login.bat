@@ -1,8 +1,9 @@
 @echo off
+setlocal
 cd /d "%~dp0"
-python auto_login.py
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0login.ps1"
 if %errorlevel% neq 0 (
     echo.
-    echo 运行失败，请检查 Python 是否已安装并加入系统 PATH
+    echo 运行失败，请检查 login.log
     pause
 )
